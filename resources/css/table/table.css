@@ -1,0 +1,6 @@
+@import url('./__header/table__header.css');
+@import url('./__body/table__body.css');
+.table{
+    display: flex;
+    flex-direction: column;
+}
