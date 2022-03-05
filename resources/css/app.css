@@ -3,10 +3,11 @@
 @import url(./card/card.css);
 @import url(./link/link.css);
 .page{ 
-    width:100%;
+    width: 100%;
     display:flex;
+    box-sizing: border-box;
     flex-direction: row;
-    border:solid 1px red;
+    
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
@@ -49,7 +50,7 @@ color: rgba(255, 255, 255, 0.7);
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    background: #E5E5E5;
+    background: #fffcfc;
     width:100%;
     height:100%;
     box-sizing: border-box;

@@ -1,5 +1,7 @@
+@import url(./_white/table__header_white.css);
 .table__header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    background: #E5E5E5;
 }

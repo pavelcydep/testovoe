@@ -9,10 +9,11 @@ export default class Popup {
 		
         this.buttonElement.addEventListener('click',()=>{
             this.popup.classList.toggle('popup_is-opened');
-           console.log('hi');
+         
         });
     }
     close() {
 		this.popup.classList.remove('popup_is-opened');
 	}
+  
 }

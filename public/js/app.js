@@ -2177,8 +2177,6 @@ var Popup = /*#__PURE__*/function () {
 
       this.buttonElement.addEventListener('click', function () {
         _this2.popup.classList.toggle('popup_is-opened');
-
-        console.log('hi');
       });
     }
   }, {

@@ -1,6 +1,7 @@
 .table__body{
-    border:solid 1px red;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: aliceblue;
 }

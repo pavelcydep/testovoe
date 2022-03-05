@@ -10,6 +10,7 @@
 @import url(./__double-input/poput__double-input.css);
 @import url(./__subtitle/popup__subtitle.css);
 @import url(./__card-container/popup__card-container.css);
+@import url(./__link-group/popup__link-group.css);
 .popup {
   position: fixed;
   top: 0;

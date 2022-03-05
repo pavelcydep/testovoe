@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 </head>
 <body class="page">
+
+
 
 <div class="popup">
 <div class="popup__content">
@@ -36,54 +38,4 @@
 
 </div>
 </div>
-
-<div class="navigation">
-    <p class="navigation__text">
-Продукты
-</p>
-</div>
-<div class="content">
-<header class="header">
-    <p class="header__text">Продукты</p>
-</header>
-  <div class="list">
-  
-
-
-
-
-  <div class="table">
-       <div class="table__header">
-            <div class="table__card-name">Артикул</div>
-            <div class="table__card-name">Название</div>
-            <div class="table__card-name">Статус</div>
-            <div class="table__card-name">Атрибуты</div>
-       </div>
-        @foreach (
-    $tasks as $task)
-    <a class="link" href="{{url('card/'.$task->id)}}">
-    <div class="table__header table__header_white">
-      <div class="table__card-value">{{ $task->article }}</div>
-      <div class="table__card-value">{{ $task->name }}</div>
-      <div class="table__card-value">{{ $task->status }}</div>
-      <div class="table__card-value">{{ $task->data }}</div>
-     
-    </div>
-    </a>
-
-    @endforeach
-    </div>
-
-      <button class="button__add btn btn-primary">Добавить</button>
-      </div>
-    </div>
- </div>
-
- 
-
-
-   
-</div>
-<script  type="module" src="../js/app.js"></script>
 </body>
-<html>
