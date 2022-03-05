@@ -28,10 +28,16 @@ const renderAtribut=()=>{
     poputDoubleInputName.appendChild(labelValue);
     poputDoubleInputName.appendChild(inputName);
     labelName.textContent='Название';
+    inputName.setAttribute("name", "data1");
+    inputValue.setAttribute("name", "data2");
+
 
     poputDoubleInputName.appendChild(labelName);
     poputDoubleInputName.appendChild(inputValue);
     labelValue.textContent='Значение';
+
+
+
     return poputDoubleInputName;
 }
 const atributAdd=()=>{

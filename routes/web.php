@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','App\Http\Controllers\TaskController@getTasksAdmin')->name('index');
+Route::get('/card/{id}','App\Http\Controllers\TaskController@getCard')->name('card');
 Route::post('/store','App\Http\Controllers\TaskController@store')->name('store');

@@ -121,6 +121,12 @@ line-height: 11px;
 color: #f7fcfd;
 margin-bottom: 8px;
 }
+.popup__card-container{
+    display:flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .popup {
   position: fixed;
   top: 0;
@@ -140,6 +146,25 @@ margin-bottom: 8px;
     flex-direction: row;
     justify-content: space-between;
 }
+.table__body{
+    border:solid 1px red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.table__card-name{
+    max-width: 100px;
+    border: solid 1px red;
+}
+.table__card-value{
+    width: 120px;
+
+
+}
+.table{
+    display: flex;
+    flex-direction: column;
+}
 .card{
     position: fixed;
     top: 0;
@@ -151,9 +176,14 @@ margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;  
+ 
+}
+.link{
+    text-decoration: none;
+    color:black;
 }
 .page{ 
+    width:100%;
     display:flex;
     flex-direction: row;
     border:solid 1px red;

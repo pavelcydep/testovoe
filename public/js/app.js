@@ -2092,6 +2092,8 @@ var renderAtribut = function renderAtribut() {
   poputDoubleInputName.appendChild(labelValue);
   poputDoubleInputName.appendChild(inputName);
   labelName.textContent = 'Название';
+  inputName.setAttribute("name", "data1");
+  inputValue.setAttribute("name", "data2");
   poputDoubleInputName.appendChild(labelName);
   poputDoubleInputName.appendChild(inputValue);
   labelValue.textContent = 'Значение';
@@ -2157,22 +2159,32 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 var Popup = /*#__PURE__*/function () {
   function Popup(popup, buttonElement) {
+    var _this = this;
+
     _classCallCheck(this, Popup);
 
     this.popup = popup;
     this.buttonElement = buttonElement;
+    this.popup.querySelector('.popup__close').addEventListener("click", function () {
+      return _this.close();
+    });
   }
 
   _createClass(Popup, [{
     key: "openClose",
     value: function openClose() {
-      var _this = this;
+      var _this2 = this;
 
       this.buttonElement.addEventListener('click', function () {
-        _this.popup.classList.toggle('popup_is-opened');
+        _this2.popup.classList.toggle('popup_is-opened');
 
         console.log('hi');
       });
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      this.popup.classList.remove('popup_is-opened');
     }
   }]);
 

@@ -27,7 +27,7 @@ class TaskController extends Controller
     public function store(Request $request)
     {
     $task= new Product;
-    dd($request->all());
+    //dd($request->all());
   $task->fill($request->all());//получаю все запросы
     $task->save();
     return redirect()->route('index');
@@ -40,7 +40,13 @@ class TaskController extends Controller
       return view('index', ['tasks' => $task]);
     }
 
-
+    public function getCard($id)
+    {
+   
+      $task = Product::find($id);
+  
+      return view('card', ['tasks' => $task]);
+    }
 
 
   /*

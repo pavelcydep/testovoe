@@ -1,5 +1,7 @@
 @import url('./__header/table__header.css');
 @import url('./__body/table__body.css');
+@import url('./__card-name/table__card-name.css');
+@import url('./__card-value/table__card-value.css');
 .table{
     display: flex;
     flex-direction: column;

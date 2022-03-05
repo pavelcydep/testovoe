@@ -1,7 +1,9 @@
 @import url(./popup/popup.css);
-@import url(./table/__header/table__header.css);
+@import url(./table/table.css);
 @import url(./card/card.css);
+@import url(./link/link.css);
 .page{ 
+    width:100%;
     display:flex;
     flex-direction: row;
     border:solid 1px red;

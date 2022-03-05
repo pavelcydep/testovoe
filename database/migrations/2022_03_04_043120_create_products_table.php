@@ -16,11 +16,12 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->uuid('id')->autoIncrement();
+         
+            $table->increments('id');
             $table->char('article',255);
             $table->char('name',255);
             $table->char('status',255);
-            $table->jsonb('data');
+            $table->jsonb('data')->nullable($value = true);
             $table->timestamps();
            
     } );
