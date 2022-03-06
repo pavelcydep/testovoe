@@ -47,7 +47,13 @@ class TaskController extends Controller
   
       return view('card', ['tasks' => $task]);
     }
-
+    public function update($id)
+    {
+      
+      $task = Product::findOrFail($id);
+  
+      return view('update', ['tasks' => $task]);
+    }
 
   /*
     public function create()
