@@ -14,7 +14,7 @@
 
 <div class="popup__content">
 <div class="popup__link-group">
-<a class="link" href="{{url('/')}}">
+<a class="link" href="{{url('update/'.$tasks->id)}}">
 <i class="bi bi-pen"></i>
 </a>
 <a class="link" href="{{url('/')}}">

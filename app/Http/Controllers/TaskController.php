@@ -27,8 +27,10 @@ class TaskController extends Controller
     public function store(Request $request)
     {
     $task= new Product;
-    //dd($request->all());
-  $task->fill($request->all());//получаю все запросы
+    $this->validate($request, [
+      'name' => 'required|min:10',
+   ]);
+  $task->fill($request->all());
     $task->save();
     return redirect()->route('index');
     }
@@ -55,67 +57,20 @@ class TaskController extends Controller
       return view('update', ['tasks' => $task]);
     }
 
-  /*
-    public function create()
-    {
-      return view('tasks.create');
-    }
+ //изменяю запись
+ public function storeUpdate(Request $request, $id)
+ {
+   $task = Product::findOrFail($id);
+   $task->article = $request->article;
+
+   $task->update(['id' => $task->id]);
+
+   return redirect('/');
+ }
+
+
+
+
+
   
-    public function update($id)
-    {
-      $tasks = Task::orderBy('created_at', 'asc')->get();
-      $task = Task::findOrFail($id);
-  
-      return view('tasks.update', ['tasks' => $tasks]);
-    }
-    //изменяю запись
-    public function storeUpdate(Request $request, $id)
-    {
-      $task = Task::findOrFail($id);
-      $task->name = $request->name;
-  
-      $task->update(['id' => $task->id]);
-  
-      return redirect('/admin');
-    }
-  
-    public function edit($id)
-    {
-      $task = Task::find($id);
-  
-      return view('tasks.index', ['tasks' => $task]);
-    }
-  
-  
-  
-    public function delete(Task $task)
-    {
-      $task->delete();
-  
-      return redirect('/');
-    }
-  
-    public function updateTaskStatusActive(Request $request, $id)
-    {
-      $task = Task::findOrFail($id);
-  
-  
-      $task->active = $request->active;
-  
-      $task->update(['active' => $task->active]);
-  
-      return redirect('/');
-    }
-  
-    public function updateTaskStatusCompleted(Request $request, $id)
-    {
-      $task = Task::findOrFail($id);
-  
-  
-      $task->completed = $request->completed;
-  
-      $task->update(['completed' => $task->completed]);
-  
-      return redirect('/');
-    }*/
 }

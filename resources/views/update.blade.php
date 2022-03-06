@@ -12,21 +12,26 @@
 
 
 
-<div class="popup">
+<div class="popup_is-opened">
 <div class="popup__content">
 <div class="popup__link-group">
 <i class="bi bi-x-lg popup__close"></i>
 </div>
-{!! Form::open(['route'=>['store']]) !!}
+
+        <form action="{{ url('storeUpdate/'.$tasks->id) }}" method="POST">
+     
+      <input type="hidden" name="_method" value="PUT">
+     {{ csrf_field() }}
 <h1 class="popup__title">Добавить продукт</h1>
 <p class="popup__subtitle">Артикул</p>
-<input type="text" class="popup__input form-control" placeholder="Артикул" name="article"  value="{{old('article')}}">
+<input type="text" class="popup__input form-control" placeholder="Артикул" name="article"  value="{{$tasks->article}}">
 <p class="popup__subtitle">Название</p>
-<input type="text" class="popup__input form-control" placeholder="Название" name="name"  value="{{old('name')}}">
+<input type="text" class="popup__input form-control" placeholder="Название" name="name"  value="{{$tasks->name}}">
 <p class="popup__subtitle">Статус</p>
-<select  class="popup__input form-select" name="status"  value="{{old('status')}}">
-        <option >available</option>
-        <option>unavailable</option>
+<select  class="popup__input form-select" name="status"  value="{{$tasks->status}}">
+        <option selected value="{{$tasks->status}}">{{$tasks->status}}</option>
+        <option>свободен</option>
+        <option>занят</option>
       </select>
       <h1 class="popup__title">Атрибуты</h1>
 <div class="poput__atribut">
@@ -34,8 +39,9 @@
      </div>
     <p class="popup__btn popup__subtitle">+ Добавить атрибут</p>
  <button  class="btn btn-primary">Добавить</button>
- {!! Form::close() !!}
+</form>
 
 </div>
 </div>
+<script  type="module" src="../js/app.js"></script>
 </body>
