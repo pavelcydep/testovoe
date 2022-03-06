@@ -11,6 +11,7 @@
 @import url(./__subtitle/popup__subtitle.css);
 @import url(./__card-container/popup__card-container.css);
 @import url(./__link-group/popup__link-group.css);
+@import url(./__link-row/popup__link-row.css);
 .popup {
   position: fixed;
   top: 0;

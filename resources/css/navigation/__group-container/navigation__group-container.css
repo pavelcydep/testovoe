@@ -1,0 +1,4 @@
+.navigation__group-container{
+    display: flex;
+    flex-direction: row;
+}

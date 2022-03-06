@@ -14,15 +14,20 @@
 
 <div class="popup__content">
 <div class="popup__link-group">
+<div class="popup__link-row">
+
 <a class="link" href="{{url('update/'.$tasks->id)}}">
 <i class="bi bi-pen"></i>
 </a>
+<form action="{{ url('task/'.$tasks->id) }}" method="POST">
+            {!! csrf_field() !!}
+            {!! method_field('DELETE') !!}
+<button class="bi bi-trash button-delete"></button>
+</form>
 <a class="link" href="{{url('/')}}">
-<i class="bi bi-trash"></i>
+<i class="bi bi-x-lg "></i>
 </a>
-<a class="link" href="{{url('/')}}">
-<i class="bi bi-x-lg"></i>
-</a>
+</div>
 </div>
 <h1 class="popup__title">
 {{ $tasks->article }}
@@ -35,6 +40,7 @@
 {{ $tasks->article }}
 </h2>
 </div>
+
 
 
 <div class="popup__card-container">

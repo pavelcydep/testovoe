@@ -2,6 +2,9 @@
 @import url(./table/table.css);
 @import url(./card/card.css);
 @import url(./link/link.css);
+@import url(./navigation/navigation.css);
+@import url(./text/text.css);
+@import url(./header/header.css);
 .page{ 
     width: 100%;
     display:flex;
@@ -17,45 +20,23 @@
     box-sizing: border-box;
     flex-direction: column;
 }
-.navigation{
-    width:20%;
-    height:1000px;
-    background: #464141;
-    border:solid 1px red;
-}
-.navigation__text{
-    font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 11px;
-color: rgba(255, 255, 255, 0.7);
-}
-.header{
-    width:100%;
-    height:10%;
-    border:solid 1px red;
-}
-.header__text{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 11px;
-    color: #ED1C24;
-
-}
 .list{
     display:flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    background: #fffcfc;
+    
     width:100%;
     height:100%;
     box-sizing: border-box;
+    background: #E5E5E5;
 }
 .my-table{
     width:60%;
     
+}
+.button-delete{
+    border: none; 
+   
+    background: #374050;
 }

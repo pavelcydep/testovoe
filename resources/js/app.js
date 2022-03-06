@@ -1,5 +1,5 @@
 require('./bootstrap');
-import Table from './table';
+
 import Popup from './popup';
 
 const tbody =  document.querySelector('.my-table__tbody');
@@ -12,7 +12,6 @@ popupTaskAdd.openClose();
 
 
 const renderAtribut=()=>{
-
     const poputDoubleInputName = document.createElement('div');
     poputDoubleInputName.classList.add('poput__double-input');
     const button= document.createElement('button');

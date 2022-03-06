@@ -1,0 +1,9 @@
+@import url(./__text-name/header__text-name.css);
+@import url(./__text/header__text.css);
+.header{
+    height: 60px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+}

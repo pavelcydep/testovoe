@@ -18,13 +18,14 @@
 {!! Form::open(['route'=>['store']]) !!}
 <h1 class="popup__title">Добавить продукт</h1>
 <p class="popup__subtitle">Артикул</p>
-<input type="text" class="popup__input form-control" placeholder="Артикул" name="article"  value="{{old('article')}}">
+<input type="text" minlength="10" required  class="popup__input form-control" placeholder="Артикул" name="article"  value="{{old('article')}}">
 <p class="popup__subtitle">Название</p>
-<input type="text" class="popup__input form-control" placeholder="Название" name="name"  value="{{old('name')}}">
+<input type="text" 
+ class="popup__input form-control" placeholder="Название" name="name"  value="{{old('name')}}">
 <p class="popup__subtitle">Статус</p>
 <select  class="popup__input form-select" name="status"  value="{{old('status')}}">
-        <option >available</option>
-        <option>unavailable</option>
+        <option >Занят</option>
+        <option>Свободен</option>
       </select>
       <h1 class="popup__title">Атрибуты</h1>
 <div class="poput__atribut">
@@ -38,13 +39,28 @@
 </div>
 
 <div class="navigation">
+  <div class="navigation__group-container">
+<div class="navigation__image-container">
+ 
+  <img class="navigation__image" src="{{ asset('images/logo.png') }}">
+</div>
+<div class="navigation__image-container navigation__image-container_dark">
+ 
+  <img class="navigation__image" src="{{ asset('images/text-logo.png') }}">
+</div>
+</div>
     <p class="navigation__text">
 Продукты
 </p>
 </div>
 <div class="content">
 <header class="header">
-    <p class="header__text">Продукты</p>
+    <div class="header__text">
+      <p class="text">Продукты</p>
+      </div>
+      <div class="header__text-name">
+    <p class="text">Павлов Павел Валерьевич</p>
+      </div>
 </header>
   <div class="list">
   

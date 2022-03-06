@@ -19,3 +19,4 @@ Route::get('/card/{id}','App\Http\Controllers\TaskController@getCard')->name('ca
 Route::post('/store','App\Http\Controllers\TaskController@store')->name('store');
 Route::get('/update/{id}','App\Http\Controllers\TaskController@update')->name('update');
 Route::put('/storeUpdate/{id}','App\Http\Controllers\TaskController@storeUpdate')->name('storeUpdate');
+Route::delete('/task/{task}','App\Http\Controllers\TaskController@delete')->name('tasks.delete');

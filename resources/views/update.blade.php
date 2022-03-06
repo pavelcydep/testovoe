@@ -15,14 +15,16 @@
 <div class="popup_is-opened">
 <div class="popup__content">
 <div class="popup__link-group">
+<a class="link" href="{{url('/')}}">
 <i class="bi bi-x-lg popup__close"></i>
+</a>
 </div>
 
         <form action="{{ url('storeUpdate/'.$tasks->id) }}" method="POST">
      
       <input type="hidden" name="_method" value="PUT">
      {{ csrf_field() }}
-<h1 class="popup__title">Добавить продукт</h1>
+<h1 class="popup__title">Редактировать {{$tasks->name}}</h1>
 <p class="popup__subtitle">Артикул</p>
 <input type="text" class="popup__input form-control" placeholder="Артикул" name="article"  value="{{$tasks->article}}">
 <p class="popup__subtitle">Название</p>
