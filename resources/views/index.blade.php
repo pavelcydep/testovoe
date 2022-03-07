@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -28,7 +27,32 @@
         <option>Свободен</option>
       </select>
       <h1 class="popup__title">Атрибуты</h1>
-<div class="poput__atribut">
+<div class="poput__atribut display-none">
+
+
+<div class="poput__double-input">
+<div class="mb-3 popup__input popup__input_double-input">
+<label for="exampleInputPassword1" class="popup__subtitle">Название</label>
+     <input type="text"  class="popup__input popup__input_double-input form-control" placeholder="Disabled input" name="data[name]"  value="{{ old('data.name',  isset($task->data['name']) ? $task->data['name'] : '') }}">
+</div>
+<div class="popup__input popup__input_double-input mb-3">
+<label for="exampleInputPassword1" class="popup__subtitle">Значение</label>
+     <input type="text"  class="popup__input popup__input_double-input form-control" placeholder="Название" name="data[value]"  value="{{ old('data.name',  isset($task->data['value']) ? $task->data['value'] : '') }}">
+</div>
+     </div>
+    
+     <div class="poput__double-input ">
+<div class="mb-3 popup__input popup__input_double-input">
+<label for="exampleInputPassword1" class="popup__subtitle">Название</label>
+     <input type="text"  class="popup__input popup__input_double-input form-control" placeholder="Disabled input" name="data[name2]"  value="{{ old('data.name2',  isset($task->data['name2']) ? $task->data['name2'] : '') }}">
+</div>
+<div class="popup__input popup__input_double-input mb-3">
+<label for="exampleInputPassword1" class="popup__subtitle">Значение</label>
+     <input type="text"  class="popup__input popup__input_double-input form-control" placeholder="Название" name="data[value2]"  value="{{ old('data.name2',  isset($task->data['value2']) ? $task->data['value2'] : '') }}">
+</div>
+     </div>
+
+
 
      </div>
     <p class="popup__btn popup__subtitle">+ Добавить атрибут</p>
@@ -82,8 +106,11 @@
       <div class="table__card-value">{{ $task->article }}</div>
       <div class="table__card-value">{{ $task->name }}</div>
       <div class="table__card-value">{{ $task->status }}</div>
-      <div class="table__card-value">{{ $task->data }}</div>
-     
+      <div class="table__card-group">
+      @foreach ($task->data as $value)
+     <p class="text">{{ $value }}:</p>
+      @endforeach
+      </div>
     </div>
     </a>
 

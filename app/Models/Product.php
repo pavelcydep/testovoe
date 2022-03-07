@@ -11,13 +11,25 @@ class Product extends Model
 
     protected $tabel="products";
     public $timestamps=false;
+    
     protected $fillable=[
         'id',
         'article',
         'name',
         'status',
-        'data',
+        'data'
        
     ];
+
+    protected $casts = [
+        'data' => 'array'
+    ];
+   
+    public function setMetaAttribute($value)
+    {
+     
+
+        $this->attributes['data'] = json_encode($value);
+    }
 
 }

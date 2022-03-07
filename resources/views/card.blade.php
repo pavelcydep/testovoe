@@ -65,9 +65,11 @@
 <h2 class="popup__subtitle">
 Статус
 </h2>
-<h2 class="popup__subtitle">
-{{ $tasks->data }}
-</h2>
+
+@foreach ($tasks->data as $value)
+     <p class="popup__subtitle">{{ $value }}:</p>
+      @endforeach
+
 </div>
 
 </div>

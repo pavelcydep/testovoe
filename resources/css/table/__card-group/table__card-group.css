@@ -1,0 +1,5 @@
+.table__card-group{
+    display: flex;
+    flex-direction:row;
+    background-color: aliceblue;
+}

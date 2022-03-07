@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->char('article',255);
             $table->char('name',255);
             $table->char('status',255);
-            $table->jsonb('data')->nullable($value = true);
+            $table->json('data');
             $table->timestamps();
            
     } );

@@ -26,10 +26,9 @@ class TaskController extends Controller
   
     public function store(Request $request)
     {
+     // dd($request->all());
     $task= new Product;
-    $this->validate($request, [
-      'name' => 'required|min:10',
-   ]);
+  
   $task->fill($request->all());
     $task->save();
     return redirect()->route('index');

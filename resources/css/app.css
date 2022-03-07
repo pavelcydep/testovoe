@@ -5,6 +5,7 @@
 @import url(./navigation/navigation.css);
 @import url(./text/text.css);
 @import url(./header/header.css);
+@import url(./display/display-none.css);
 .page{ 
     width: 100%;
     display:flex;

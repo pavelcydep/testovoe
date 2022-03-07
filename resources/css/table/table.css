@@ -2,6 +2,7 @@
 @import url('./__body/table__body.css');
 @import url('./__card-name/table__card-name.css');
 @import url('./__card-value/table__card-value.css');
+@import url('./__card-group/table__card-group.css');
 .table{
     display: flex;
     flex-direction: column;

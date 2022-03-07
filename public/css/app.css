@@ -173,6 +173,11 @@ flex-direction: row;
 background-color: aliceblue;
 
 }
+.table__card-group{
+    display: flex;
+    flex-direction:row;
+    background-color: aliceblue;
+}
 .table{
     display: flex;
     flex-direction: column;
@@ -258,6 +263,9 @@ border-bottom:solid red 2px ;
     box-sizing: border-box;
     flex-direction: row;
     justify-content: space-between;
+}
+.display-none{
+    display:none;
 }
 .page{ 
     width: 100%;

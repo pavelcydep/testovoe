@@ -2073,37 +2073,9 @@ var popupTaskAdd = new _popup__WEBPACK_IMPORTED_MODULE_0__["default"](popupTask,
 var buttonAtributAdd = document.querySelector('.popup__btn');
 var popupDoubleInput = document.querySelector('.poput__atribut');
 popupTaskAdd.openClose();
-
-var renderAtribut = function renderAtribut() {
-  var poputDoubleInputName = document.createElement('div');
-  poputDoubleInputName.classList.add('poput__double-input');
-  var button = document.createElement('button');
-  var labelName = document.createElement('label');
-  var labelValue = document.createElement('label');
-  var inputName = document.createElement('input');
-  var inputValue = document.createElement('input');
-  labelName.classList.add('popup__subtitle');
-  labelValue.classList.add('popup__subtitle');
-  inputName.classList.add('popup__input_double-input');
-  inputValue.classList.add('popup__input_double-input');
-  poputDoubleInputName.appendChild(labelName);
-  poputDoubleInputName.appendChild(labelValue);
-  poputDoubleInputName.appendChild(inputName);
-  labelName.textContent = 'Название';
-  inputName.setAttribute("name", "data1");
-  inputValue.setAttribute("name", "data2");
-  poputDoubleInputName.appendChild(labelName);
-  poputDoubleInputName.appendChild(inputValue);
-  labelValue.textContent = 'Значение';
-  return poputDoubleInputName;
-};
-
-var atributAdd = function atributAdd() {
-  var poputDouble = renderAtribut();
-  popupDoubleInput.appendChild(poputDouble);
-};
-
-buttonAtributAdd.addEventListener('click', atributAdd);
+buttonAtributAdd.addEventListener('click', function () {
+  return popupDoubleInput.classList.remove('display-none');
+});
 
 /***/ }),
 
