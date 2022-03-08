@@ -2072,9 +2072,13 @@ var popupTask = document.querySelector('.popup');
 var popupTaskAdd = new _popup__WEBPACK_IMPORTED_MODULE_0__["default"](popupTask, buttonAdd);
 var buttonAtributAdd = document.querySelector('.popup__btn');
 var popupDoubleInput = document.querySelector('.poput__atribut');
+var buttonDelete = document.querySelector('.button-delete');
 popupTaskAdd.openClose();
 buttonAtributAdd.addEventListener('click', function () {
   return popupDoubleInput.classList.remove('display-none');
+});
+buttonDelete.addEventListener('click', function () {
+  return popupDoubleInput.classList.add('display-none');
 });
 
 /***/ }),
