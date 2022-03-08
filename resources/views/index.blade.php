@@ -25,7 +25,7 @@
       <p class="popup__subtitle">Статус</p>
       <select class="popup__input form-select" name="status" value="{{old('status')}}">
         <option>Доступен</option>
-        <option>Не доступен</option>
+        <option>Недоступен</option>
       </select>
       <h1 class="popup__title">Атрибуты</h1>
       <div class="poput__atribut display-none">
@@ -34,11 +34,11 @@
         <div class="poput__double-input">
           <div class="mb-3 popup__input popup__input_double-input">
             <label for="exampleInputPassword1" class="popup__subtitle">Название</label>
-            <input type="text" class="popup__input popup__input_double-input form-control" placeholder="Disabled input" name="data[name]" value="{{ old('data.name',  isset($task->data['name']) ? $task->data['name'] : '') }}">
+            <input type="text" class="popup__input popup__input_double-input form-control" placeholder="Название" name="data[name]" value="{{ old('data.name',  isset($task->data['name']) ? $task->data['name'] : '') }}">
           </div>
           <div class="popup__input popup__input_double-input mb-3">
             <label for="exampleInputPassword1" class="popup__subtitle">Значение</label>
-            <input type="text" class="popup__input popup__input_double-input form-control" placeholder="Название" name="data[value]" value="{{ old('data.name',  isset($task->data['value']) ? $task->data['value'] : '') }}">
+            <input type="text" class="popup__input popup__input_double-input form-control" placeholder="Значение" name="data[value]" value="{{ old('data.name',  isset($task->data['value']) ? $task->data['value'] : '') }}">
           </div>
           <button class="button-delete bi bi-trash "></button>
         </div>

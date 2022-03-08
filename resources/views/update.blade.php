@@ -34,7 +34,7 @@
         <select class="popup__input form-select" name="status" value="{{$tasks->status}}">
           <option selected value="{{$tasks->status}}">{{$tasks->status}}</option>
           <option>Доступен</option>
-          <option>Не доступен</option>
+          <option>Недоступен</option>
         </select>
 
 
