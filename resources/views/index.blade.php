@@ -24,8 +24,8 @@
       <input type="text" class="popup__input form-control" placeholder="Название" name="name" value="{{old('name')}}">
       <p class="popup__subtitle">Статус</p>
       <select class="popup__input form-select" name="status" value="{{old('status')}}">
-        <option>Занят</option>
-        <option>Свободен</option>
+        <option>Доступен</option>
+        <option>Не доступен</option>
       </select>
       <h1 class="popup__title">Атрибуты</h1>
       <div class="poput__atribut display-none">
